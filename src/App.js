@@ -251,7 +251,7 @@ export default function Portfolio() {
             Cloud DevOps & DevSecOps Engineer
           </p>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto animate-fade-in">
-            Senior Consultant at Ernst & Young with 5+ years expertise in Cloud Infrastructure, Site Reliability Engineering, and Security Compliance
+            Assistant Manager - Technology Consultant at Willis Towers & Watson (WTW) with 5+ years expertise in Cloud Infrastructure, Site Reliability Engineering, and Security Compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in">
             <a href="https://github.com/sohamruj" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors">
