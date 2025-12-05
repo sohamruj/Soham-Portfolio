@@ -25,23 +25,9 @@ export default function Portfolio() {
 
   const experiences = [
     {
-        company: "Willis Towers Watson (WTW)",
-        role: "Assistant Manager - Technology Consultant",
-        duration: "Feb 2025 - Present",
-        location: "Gurugram",
-        client: "Banking Sector",
-        highlights: [
-          "Led IFRS17 implementation for major banking and insurance clients, ensuring compliance with international financial reporting standards.",
-          "Configured and managed Windows Server environments, supporting seamless integration of Unify with client infrastructure.",
-          "Developing automation scripts for server configuration and infrastructure management",
-          "Provided technical consulting and client support throughout the implementation lifecycle, from requirement gathering to post-deployment optimization.",
-          "Built strong client relationships by translating regulatory needs into practical technology solutions, driving trust and long-term partnerships."
-        ]
-      },
-    {
       company: "Ernst & Young (EY)",
       role: "Senior Consultant",
-      duration: "May 2024 - Feb 2025",
+      duration: "May 2024 - Present",
       location: "Gurugram",
       client: "Adobe",
       highlights: [
@@ -128,6 +114,54 @@ export default function Portfolio() {
     }
   ];
 
+  const certifications = [
+    {
+      name: "AWS Solutions Architect",
+      category: "Cloud Platform",
+      icon: "☁️"
+    },
+    {
+      name: "Azure Administration",
+      category: "Cloud Platform",
+      icon: "☁️"
+    },
+    {
+      name: "Data Engineering Pipelines",
+      category: "Data Engineering",
+      icon: "📊"
+    },
+    {
+      name: "Data Science",
+      category: "Data & Analytics",
+      icon: "🔬"
+    },
+    {
+      name: "Penetration Testing",
+      category: "Security",
+      icon: "🔒"
+    },
+    {
+      name: "Data Structure and Algorithms",
+      category: "Computer Science",
+      icon: "💻"
+    },
+    {
+      name: "Linear Algebra",
+      category: "Mathematics",
+      icon: "📐"
+    },
+    {
+      name: "Statistics",
+      category: "Mathematics",
+      icon: "📈"
+    },
+    {
+      name: "Python",
+      category: "Programming",
+      icon: "🐍"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Navigation */}
@@ -140,7 +174,7 @@ export default function Portfolio() {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'experience', 'skills', 'achievements', 'contact'].map((item) => (
+              {['home', 'about', 'experience', 'skills', 'certifications', 'achievements', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -162,7 +196,7 @@ export default function Portfolio() {
         {isMenuOpen && (
           <div className="md:hidden bg-slate-900/95 backdrop-blur-sm">
             <div className="px-4 py-3 space-y-3">
-              {['home', 'about', 'experience', 'skills', 'achievements', 'contact'].map((item) => (
+              {['home', 'about', 'experience', 'skills', 'certifications', 'achievements', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -190,10 +224,10 @@ export default function Portfolio() {
             Soham Ruj
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-6 animate-fade-in">
-            Senior Cloud DevOps & DevSecOps Engineer
+            Cloud DevOps & DevSecOps Engineer
           </p>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto animate-fade-in">
-            Assistant Manager at Willis Towers and Watson (WTW) with 5+ years expertise in Cloud Infrastructure, Site Reliability Engineering, and Security Compliance
+            Senior Consultant at Ernst & Young with 5+ years expertise in Cloud Infrastructure, Site Reliability Engineering, and Security Compliance
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in">
             <a href="https://github.com/sohamruj" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors">
@@ -320,8 +354,35 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 px-4 bg-slate-900/50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            Certifications & Courses
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certifications.map((cert, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all transform hover:scale-105">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl">{cert.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
+                    <p className="text-sm text-cyan-400">{cert.category}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-slate-300 text-lg">
+              Continuously upgrading skills to stay ahead in Cloud, DevOps, Security, and Data Engineering
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Achievements Section */}
-      <section id="achievements" className="py-20 px-4 bg-slate-900/50">
+      <section id="achievements" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Key Achievements
@@ -373,7 +434,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-slate-800">
         <div className="max-w-6xl mx-auto text-center text-slate-400">
-          <p>© 2025 Soham Ruj. Built with React & Tailwind CSS</p>
+          <p>© 2024 Soham Ruj. Built with React & Tailwind CSS</p>
         </div>
       </footer>
 
